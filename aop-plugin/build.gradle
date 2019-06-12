@@ -1,0 +1,26 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'com.android.tools.build:gradle:3.4.1'
+    compile 'org.aspectj:aspectjtools:1.9.1'
+    compile 'org.aspectj:aspectjrt:1.9.1'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+uploadArchives { // 这里只是更新到本地，可以上传到自定义的maven仓库
+    repositories {
+        mavenDeployer {
+            pom.groupId = 'com.fomin.aop.plugin'
+            pom.artifactId = 'aop-plugin'
+            pom.version = '1.0.0'
+            repository(url: uri('../repo'))
+        }
+    }
+}
