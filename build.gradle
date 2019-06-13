@@ -6,7 +6,7 @@ buildscript {
         google()
         jcenter()
         mavenCentral()
-        maven { url '../repo' }
+        maven{url 'https://raw.githubusercontent.com/fomin-zhu/repo/master'}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:3.4.1"
