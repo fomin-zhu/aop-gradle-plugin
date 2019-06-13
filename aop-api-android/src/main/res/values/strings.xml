@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">aop</string>
+    <string name="permission_camera_tps">请授权：照相机权限</string>
+</resources>

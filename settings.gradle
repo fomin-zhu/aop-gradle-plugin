@@ -1,1 +1,1 @@
-include ':app',':aop-plugin'
+include ':app',':aop-plugin',':aop-api-android'
